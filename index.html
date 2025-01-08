@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <script>
+    function answer() {
+      const a_answer = "WAD";
+      const u_answer = document.getElementById("answer").value.trim();
+      const result = document.getElementById("result");
+
+      if (u_answer.toUpperCase() === a_answer) {
+        result.textContent = "Correct!";
+        result.style.color = "green";
+      } else {
+        result.textContent = `Incorrect. The correct answer is ${a_answer}.`;
+        result.style.color = "red";
+      }
+    }
+  </script>
+</head>
+<body style="background-color: aquamarine;">
+    <center>
+        <h1>Interactive Quiz</h1>
+        <p>What is the short form of 'Web Application Development'?</p>
+        <input type="text" id="answer" placeholder="Enter your answer here" />
+        <button onclick="answer()">Submit</button>
+        <p id="result"></p>
+    </center>
+</body>
+</html>
